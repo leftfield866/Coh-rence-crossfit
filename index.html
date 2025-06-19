@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mémo Cohérence Cardiaque & CrossFit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdfaf6; /* Fond blanc cassé doux */
+            color: #6c7a89; /* Gris-bleu pastel pour le texte */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .memo-container {
+            border: 2px solid #e0e0e0; /* Bordure gris clair */
+            padding: 25px 35px;
+            background-color: #ffffff;
+            max-width: 800px;
+            width: 100%;
+            margin: auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 4px double #d4d8e1; /* Bordure pastel */
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #6c7a89; /* Texte principal pastel */
+        }
+        .header h2 {
+            font-size: 1.2em;
+            font-weight: 400;
+            margin: 5px 0 0;
+            color: #92a8d1; /* Bleu lavande */
+        }
+        .main-graphic {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .main-graphic svg {
+            width: 120px;
+            height: auto;
+        }
+        .main-graphic .kettlebell-part {
+             fill: #6c7a89; /* Gris-bleu pastel */
+        }
+        .main-graphic .wave-part {
+            stroke: #f7cac9; /* Rose poudré */
+        }
+        .main-graphic p {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #888;
+            margin-top: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #6c7a89;
+        }
+        .section-title span {
+            margin-right: 12px;
+            font-size: 1.5em;
+        }
+        .three-six-five {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px 0;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .three-six-five-item {
+            font-weight: 700;
+            font-size: 0.9em;
+            width: 30%;
+        }
+        .three-six-five-item .number {
+            font-size: 4em;
+            font-weight: 900;
+            color: #f7cac9; /* Rose poudré */
+            line-height: 1;
+        }
+        .plan-action {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .action-card {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .action-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+        }
+        .action-card h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #6c7a89;
+        }
+        .action-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #92a8d1; /* Bleu lavande */
+        }
+        .action-card p {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .pillars {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2em;
+            letter-spacing: 15px;
+            opacity: 0.8;
+        }
+        .footer {
+            border-top: 2px solid #e0e0e0;
+            padding-top: 20px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer strong {
+            color: #6c7a89;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8em; }
+            .header h2 { font-size: 1em; }
+            .three-six-five { flex-direction: column; gap: 20px; }
+            .three-six-five-item { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="memo-container">
+
+    <header class="header">
+        <h1>Votre Mémo Performance</h1>
+        <h2>Cohérence Cardiaque &amp; CrossFit</h2>
+    </header>
+
+    <div class="main-graphic">
+        <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+            <path class="kettlebell-part" d="M 30 15 A 10 8 0 0 0 70 15 L 75 15 L 75 25 L 25 25 L 25 15 Z" />
+            <circle class="kettlebell-part" cx="50" cy="45" r="20" />
+            <polyline class="wave-part" points="10,45 25,45 30,35 40,55 50,40 60,50 70,30 80,45 90,45" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p>L'ÉQUILIBRE AU CŒUR DE LA FORCE</p>
+    </div>
+
+    <section class="section">
+        <h3 class="section-title"><span>❤️</span> La Méthode 365 : Votre Routine</h3>
+        <p>Le moyen le plus simple et rapide pour piloter votre système nerveux, réduire le stress et accélérer votre récupération. C'est votre outil de maintenance.</p>
+        <div class="three-six-five">
+            <div class="three-six-five-item">
+                <div class="number">3</div>
+                FOIS PAR JOUR
+            </div>
+            <div class="three-six-five-item">
+                <div class="number">6</div>
+                RESPIRATIONS / MIN<br>(5s INSPIR / 5s EXPIR)
+            </div>
+            <div class="three-six-five-item">
+                <div class="number">5</div>
+                MINUTES
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3 class="section-title"><span>🏋️</span> Votre Plan d'Action CrossFit</h3>
+        <div class="plan-action">
+            <div class="action-card">
+                <div class="icon">🎯</div>
+                <h4>PRÉ-WOD</h4>
+                <p><strong>QUAND :</strong> 5 min avant la séance.<br><strong>POURQUOI :</strong> Calme, focus et lucidité. Abordez la barre avec un mental clair.</p>
+            </div>
+            <div class="action-card">
+                <div class="icon">⚡️</div>
+                <h4>POST-WOD</h4>
+                <p><strong>QUAND :</strong> Juste après l'effort.<br><strong>POURQUOI :</strong> "Disjoncteur" de stress. Active la récupération immédiatement.</p>
+            </div>
+            <div class="action-card">
+                <div class="icon">🌙</div>
+                <h4>SOMMEIL</h4>
+                <p><strong>QUAND :</strong> 5 min avant de dormir.<br><strong>POURQUOI :</strong> Prépare un sommeil profond et réparateur, la clé de votre progression.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3 class="section-title"><span>🏆</span> Le Défi 21 Jours</h3>
+        <p>La connaissance ne vaut rien sans l'action. Intégrez <strong>au minimum 1 séance par jour</strong> pendant 3 semaines pour en ressentir les pleins effets. Utilisez une application comme <strong>RespiRelax+</strong> pour vous guider.</p>
+    </section>
+
+    <div class="pillars">
+        <span>🫁</span> <!-- Respiration -->
+        <span>🏋️‍♂️</span> <!-- Mouvement -->
+        <span>🛌</span> <!-- Repos -->
+        <span>🍎</span> <!-- Nutrition -->
+        <span>🧠</span> <!-- Mindset -->
+    </div>
+
+    <footer class="footer">
+        <p><strong>Un esprit calme est l'arme ultime de l'athlète.</strong></p>
+        <br>
+        <p>
+            <strong>[Votre Nom]</strong> - [Votre Titre]<br>
+            [Votre Email] | [Votre Numéro de téléphone]
+        </p>
+        <p>
+            <strong>[Nom de la Box de CrossFit]</strong><br>
+            [Adresse de la Box] | [Site Web ou @Instagram de la Box]
+        </p>
+    </footer>
+
+</div>
+
+</body>
+</html>
